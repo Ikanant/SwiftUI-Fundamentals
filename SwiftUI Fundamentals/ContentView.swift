@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello SwiftUI")
-            .padding()
+        HStack {
+            Spacer()
+            VStack {
+                Text("Hello From the TOP RIGHT")
+                    .padding()
+                Spacer()
+            }
+        }
     }
 }
 
