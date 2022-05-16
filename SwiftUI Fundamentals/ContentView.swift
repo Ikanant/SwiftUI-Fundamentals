@@ -9,19 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Spacer()
-            VStack {
-                Text("Hello From the TOP RIGHT")
-                    .padding()
-                Spacer()
-            }
-        }
+        return Button(action: {
+            print("Banana")
+        }, label: {
+            Text("MY COOL BUTTON") // This guy is a simple blue text
+                .font(.title)
+                .foregroundColor(.white)
+                .padding()
+                .background() {
+                    Rectangle()
+                        .cornerRadius(90)
+                }
+        })
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .previewInterfaceOrientation(.portrait)
+        }
     }
 }
+
